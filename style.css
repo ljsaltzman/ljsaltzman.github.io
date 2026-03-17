@@ -403,103 +403,51 @@ footer {
 }
 
 /* ── Responsive ── */
-.mobile-tab-bar {
-  display: none;
-}
-
 @media (max-width: 1024px) {
   .layout {
-    display: block;
-    padding: 0;
+    grid-template-columns: 1fr;
     height: auto;
+    gap: 1.5rem;
+    padding: 1.5rem;
   }
 
-  /* Compact sticky header */
-  .column-left {
-    position: sticky;
-    top: 0;
-    z-index: 10;
-    background: var(--bg);
-    border-bottom: 1px solid var(--border);
-    padding: 0.75rem 1.25rem;
-    height: auto;
-  }
-
-  .header-section {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 0;
-  }
-
-  .site-name {
-    font-size: 1rem;
-    margin-bottom: 0;
-  }
-
-  .main-nav {
-    flex-direction: row;
-    gap: 1.25rem;
-  }
-
-  .main-nav .nav-label {
-    display: none;
-  }
-
-  .main-nav a {
-    font-size: 1rem;
-    padding: 0.25rem;
-  }
-
-  /* Sticky tab bar */
-  .mobile-tab-bar {
-    display: flex;
-    position: sticky;
-    top: 50px;
-    z-index: 9;
-    background: var(--bg);
-    border-bottom: 1px solid var(--border);
-  }
-
-  .tab-btn {
-    flex: 1;
-    background: none;
-    border: none;
-    border-bottom: 2px solid transparent;
-    margin-bottom: -1px;
-    padding: 0.65rem 1rem;
-    font-size: 0.75rem;
-    font-weight: 600;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: var(--muted);
-    cursor: pointer;
-    transition: color 0.15s, border-color 0.15s;
-  }
-
-  .tab-btn.active {
-    color: var(--text);
-    border-bottom-color: var(--text);
-  }
-
-  /* Tab panels */
-  .column-middle,
+  .column-left,
   .column-right {
-    padding: 1.5rem 1.25rem;
-    border: none;
-    overflow-y: visible;
+    position: relative;
+    top: auto;
     height: auto;
     max-height: none;
   }
 
-  .tab-hidden {
-    display: none;
+  .column-middle {
+    border-right: none;
+    border-bottom: 1px solid var(--border);
+    padding-right: 0;
+    padding-bottom: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .column-right {
+    border-left: none;
+    padding-left: 0;
   }
 }
 
 @media (max-width: 640px) {
-  .column-middle,
-  .column-right {
-    padding: 1.25rem 1rem;
+  .layout {
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  .site-name {
+    font-size: 1.25rem;
+  }
+
+  .main-nav a {
+    font-size: 0.85rem;
+  }
+
+  .project-title {
+    font-size: 0.95rem;
   }
 }

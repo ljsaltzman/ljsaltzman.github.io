@@ -22,31 +22,3 @@ function renderProjects(items) {
 }
 
 renderProjects(projects);
-
-// Mobile tab switching
-(function () {
-  const tabBar = document.querySelector('.mobile-tab-bar');
-  if (!tabBar) return;
-
-  const panels = {
-    middle: document.querySelector('[data-panel="middle"]'),
-    right: document.querySelector('[data-panel="right"]'),
-  };
-
-  // Start with right panel hidden
-  panels.right.classList.add('tab-hidden');
-
-  tabBar.addEventListener('click', function (e) {
-    const btn = e.target.closest('.tab-btn');
-    if (!btn) return;
-
-    const target = btn.dataset.tab;
-
-    tabBar.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-
-    Object.entries(panels).forEach(([key, panel]) => {
-      panel.classList.toggle('tab-hidden', key !== target);
-    });
-  });
-}());
