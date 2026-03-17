@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" https://levisaltzman.github.io/style.css)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" https://ljsaltzman.github.io/style.css)",
+      "Bash(curl -sI https://ljsaltzman.github.io/)",
+      "Bash(curl -sI https://ljsaltzman.github.io/levisaltzman.github.io/)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" https://ljsaltzman.github.io/levisaltzman.github.io/style.css)",
+      "Bash(curl -s https://ljsaltzman.github.io/levisaltzman.github.io/)",
+      "Bash(curl -s https://ljsaltzman.github.io/levisaltzman.github.io/style.css)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" \"https://ljsaltzman.github.io/levisaltzman.github.io/data.js\")",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" \"https://ljsaltzman.github.io/levisaltzman.github.io/main.js\")"
+    ]
+  }
+}

@@ -178,8 +178,8 @@ section h2 {
 
 /* ── Right Column: CV ── */
 .cv-section {
-  margin-bottom: 2rem;
-  padding-bottom: 2rem;
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.75rem;
   border-bottom: 1px solid var(--border);
 }
 
@@ -192,7 +192,7 @@ section h2 {
 .cv-section h2 {
   border-bottom: none;
   padding-bottom: 0;
-  margin-bottom: 1rem;
+  margin-bottom: 0.25rem;
 }
 
 .cv-item {
@@ -206,13 +206,13 @@ section h2 {
 .cv-title {
   font-size: 0.9rem;
   font-weight: 600;
-  margin-bottom: 0.2rem;
+  margin-bottom: 0;
 }
 
 .cv-subtitle {
   font-size: 0.8rem;
   color: var(--muted);
-  margin-bottom: 0.2rem;
+  margin-bottom: 0;
 }
 
 .cv-meta {
@@ -229,15 +229,16 @@ section h2 {
 }
 
 .cv-details li {
-  padding-left: 1rem;
-  text-indent: -0.5rem;
+  padding-left: 0.85rem;
+  position: relative;
   margin-bottom: 0.35rem;
   line-height: 1.4;
 }
 
 .cv-details li:before {
   content: "•";
-  margin-right: 0.5rem;
+  position: absolute;
+  left: 0;
 }
 
 /* ── Post page ── */
