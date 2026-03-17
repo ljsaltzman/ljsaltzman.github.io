@@ -241,6 +241,74 @@ section h2 {
   left: 0;
 }
 
+/* ── Post page layout ── */
+header {
+  border-bottom: 1px solid var(--border);
+  padding: 1rem 2rem;
+}
+
+.header-inner {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.site-title {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.site-title a {
+  color: var(--text);
+}
+
+#post-back-nav a {
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+#post-back-nav a:hover {
+  color: var(--text);
+  text-decoration: none;
+}
+
+#post-main {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 2rem 4rem;
+}
+
+footer {
+  border-top: 1px solid var(--border);
+  padding: 1.5rem 2rem;
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.footer-links a {
+  color: var(--muted);
+  font-size: 0.8rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.footer-links a:hover {
+  color: var(--text);
+  text-decoration: none;
+}
+
 /* ── Post page ── */
 .post-hero {
   margin-bottom: 1.75rem;
