@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Levi Saltzman</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <nav>
+        <a href="#essays">Essays</a>
+        <a href="#projects">Projects</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1 class="hero-name">Levi Saltzman</h1>
+      <p class="tagline">Research analyst at the Global Poverty Research Lab. Before that, Economics and Global History at Northwestern University. Interested in the application of quantitative methods to human development.</p>
+      <div class="hero-links">
+        <a href="https://github.com/Saltzman-McGeever" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a>
+        <a href="https://www.linkedin.com/in/levi-saltzman/" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i> LinkedIn</a>
+        <a href="mailto:levisaltzman@gmail.com"><i class="fas fa-envelope"></i> Email</a>
+        <a href="Levi Saltzman_Resume.pdf" target="_blank" rel="noopener"><i class="fas fa-file"></i> CV</a>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="tile-grid" id="projects-grid">
+        <!-- populated by main.js -->
+      </div>
+    </section>
+
+    <section id="essays">
+      <h2>Essays</h2>
+      <div class="tile-grid" id="essays-grid">
+        <!-- populated by main.js -->
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> Levi Saltzman</p>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>

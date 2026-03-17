@@ -1,0 +1,321 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg: #fafaf8;
+  --text: #1a1a1a;
+  --muted: #888888;
+  --border: #e5e5e5;
+  --accent: #1d4ed8;
+  --max-width: 900px;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* ── Header ── */
+header {
+  border-bottom: 1px solid var(--border);
+}
+
+.header-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* site-title only appears on post pages */
+.site-title a {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.site-title a:hover {
+  text-decoration: none;
+  color: var(--muted);
+}
+
+nav {
+  display: flex;
+  gap: 1.5rem;
+  margin-left: auto;
+}
+
+nav a {
+  font-size: 0.875rem;
+  color: var(--muted);
+}
+
+nav a:hover {
+  color: var(--text);
+  text-decoration: none;
+}
+
+/* ── Main ── */
+main {
+  flex: 1;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1.5rem 5rem;
+  width: 100%;
+}
+
+/* ── Hero ── */
+.hero {
+  padding: 2.5rem 0;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 3.5rem;
+}
+
+.hero-name {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 0.3rem;
+}
+
+.tagline {
+  font-size: 1.1rem;
+  color: var(--muted);
+  margin-bottom: 1rem;
+}
+
+.hero-links {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 1.25rem;
+}
+
+.hero-links a {
+  color: var(--muted);
+  font-size: 0.8rem;
+}
+
+.hero-links a:hover {
+  color: var(--text);
+  text-decoration: none;
+}
+
+.hero-links i {
+  margin-right: 0.4rem;
+}
+
+/* ── Sections ── */
+section {
+  margin-bottom: 3.5rem;
+}
+
+section h2 {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--border);
+}
+
+/* ── Tile grid ── */
+.tile-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.tile {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
+.tile:hover {
+  text-decoration: none;
+}
+
+.tile:hover .tile-title {
+  text-decoration: underline;
+}
+
+.tile-img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  display: block;
+  background: #e8e8e8;
+}
+
+.tile-body {
+  padding: 0.65rem 0 0;
+}
+
+.tile-title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-bottom: 0.2rem;
+}
+
+.tile-blurb {
+  font-size: 0.85rem;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.tile-meta {
+  display: block;
+  font-size: 0.75rem;
+  color: var(--muted);
+  margin-top: 0.3rem;
+}
+
+.tile-empty {
+  font-size: 0.875rem;
+  color: var(--muted);
+}
+
+/* ── Post page ── */
+.post-hero {
+  margin-bottom: 1.75rem;
+  margin-top: 2rem;
+}
+
+.post-img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  display: block;
+  background: #e8e8e8;
+
+}
+
+.post-body {
+  max-width: 640px;
+}
+
+.post-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: 0.5rem;
+}
+
+.post-header-meta {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 0.8rem;
+  color: var(--muted);
+  margin-bottom: 2rem;
+}
+
+.post-repo {
+  color: var(--accent);
+}
+
+.post-content {
+  font-size: 0.95rem;
+  line-height: 1.75;
+}
+
+.post-content p + p {
+  margin-top: 1rem;
+}
+
+.post-content h2 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 2rem 0 0.5rem;
+  text-transform: none;
+  letter-spacing: 0;
+  color: var(--text);
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.post-content h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 1.5rem 0 0.4rem;
+}
+
+.post-content ul,
+.post-content ol {
+  margin: 0.75rem 0 0.75rem 1.5rem;
+}
+
+.post-content li + li {
+  margin-top: 0.25rem;
+}
+
+.post-content code {
+  font-family: "SF Mono", "Fira Code", monospace;
+  font-size: 0.85em;
+  background: #f0f0f0;
+  padding: 0.1em 0.35em;
+}
+
+.post-content pre {
+  background: #f0f0f0;
+  padding: 1rem;
+  overflow-x: auto;
+  margin: 1rem 0;
+  font-size: 0.85rem;
+}
+
+.post-content pre code {
+  background: none;
+  padding: 0;
+}
+
+/* ── Footer ── */
+footer {
+  text-align: center;
+  padding: 2rem 1.5rem;
+  font-size: 0.8rem;
+  color: var(--muted);
+  border-top: 1px solid var(--border);
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.footer-links a {
+  color: var(--muted);
+  font-size: 0.875rem;
+}
+
+.footer-links a:hover {
+  color: var(--text);
+}
+
+.footer-links i {
+  margin-right: 0.4rem;
+}
